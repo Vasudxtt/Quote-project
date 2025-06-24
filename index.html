@@ -13,7 +13,7 @@
   <div class="quote-box">
     <div id="day-date" class="date-time"></div>
     <h2>Quote of the day</h2>
-    <blockquote id="quote">Loading..</Loading></blockquote>
+    <blockquote id="quote">Loading..</blockquote>
     <span id="author">Loading..</span>
     <div>
       <button onclick="getquote(api_url)">New Quote</button>
@@ -38,7 +38,7 @@
 
     async function getquote(url) {
       const response = await fetch(url);
-      var data = await response.json();
+      let data = await response.json();
       quote.innerHTML=data.quote;
       author.innerHTML=data.author;
     }
